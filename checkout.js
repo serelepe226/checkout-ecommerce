@@ -27,7 +27,17 @@ function contarItens(itens) {
 // ===== SEÇÃO 2: CUPOM (estruturas condicionais) =====
 
 function aplicarCupom(subtotal, codigo) {
-  // TODO
+  codigo = codigo.trim().toUpperCase();
+
+  if (codigo === "DESC10") {
+    return Math.max(0, subtotal * 0.90);
+  } else if (codigo === "DESC20" && subtotal >= 200) {
+    return Math.max(0, subtotal * 0.80);
+  } else if (codigo === "FRETEGRATIS") {
+    return Math.max(0, subtotal - 15);
+  } else {
+    return subtotal;
+  }
 }
 
 
@@ -35,11 +45,13 @@ function aplicarCupom(subtotal, codigo) {
 
 function finalizarCompra(itens, codigoCupom) {
   const subtotal = calcularSubtotal(itens);
+  const valorFinal = aplicarCupom(subtotal, codigoCupom);
+  const desconto = subtotal - valorFinal;
 
   return {
     subtotal,
-    desconto: 0,
-    total: subtotal
+    desconto,
+    total: valorFinal
   };
 }
 
