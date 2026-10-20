@@ -13,7 +13,15 @@ function contarItens(itens) {
 // ===== SEÇÃO 2: CUPOM (estruturas condicionais) =====
 
 function aplicarCupom(subtotal, codigo) {
-  // TODO
+  if (codigo === "DESC10") {
+    return Math.max(0, subtotal * 0.90);
+  } else if (codigo === "DESC20" && subtotal >= 200) {
+    return Math.max(0, subtotal * 0.80);
+  } else if (codigo === "FRETEGRATIS") {
+    return Math.max(0, subtotal - 15);
+  } else {
+    return subtotal;
+  }
 }
 
 
