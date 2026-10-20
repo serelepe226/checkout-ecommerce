@@ -7,6 +7,7 @@ function calcularSubtotal(itens) {
   for (const item of itens) {
     subtotal += item.preco * item.quantidade;
   }
+  // Calcula o valor total dos produtos antes dos descontos.
 
   return subtotal;
 }
@@ -20,6 +21,7 @@ function contarItens(itens) {
 
   return total;
 }
+// Conta todas as unidades presentes no carrinho.
 
 
 // ===== SEÇÃO 2: CUPOM (estruturas condicionais) =====
