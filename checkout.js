@@ -23,6 +23,7 @@ function aplicarCupom(subtotal, codigo) {
     return subtotal;
   }
 }
+// DESC10 aplica 10% de desconto; DESC20 aplica 20% de desconto e só é válido para compras a partir de R$ 200; FRETEGRATIS aplica R$15,00 de desconto.
 
 
 // ===== SEÇÃO 3: CHECKOUT (integração) =====
