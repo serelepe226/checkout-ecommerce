@@ -41,4 +41,9 @@ const itens = [
   { nome: "Tênis", preco: 150, quantidade: 1 }
 ];
 
-console.log(finalizarCompra(itens, "DESC10"));
+console.log(finalizarCompra(itens, "DESC10"));  // 90 & 15
+console.log(aplicarCupom(100, "DESC10"));       // 90
+console.log(aplicarCupom(250, "DESC20"));       // 200
+console.log(aplicarCupom(100, "DESC20"));       // 100
+console.log(aplicarCupom(100, "FRETEGRATIS"));  // 85
+console.log(aplicarCupom(100, "INVALIDO"));     // 100
