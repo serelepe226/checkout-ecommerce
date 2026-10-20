@@ -2,11 +2,23 @@
  // ===== SEÇÃO 1: CARRINHO (laços de repetição) =====
 
 function calcularSubtotal(itens) {
-  // TODO
+  let subtotal = 0;
+
+  for (const item of itens) {
+    subtotal += item.preco * item.quantidade;
+  }
+
+  return subtotal;
 }
 
 function contarItens(itens) {
-  // TODO
+  let total = 0;
+
+  for (const item of itens) {
+    total += item.quantidade;
+  }
+
+  return total;
 }
 
 
